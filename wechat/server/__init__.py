@@ -5,9 +5,9 @@ Author: ilcwd
 """
 
 
-def main():
-    pass
+from .app import WechatApplication
+from .constants import *
+from .response import news_reply, text_reply
 
 
-if __name__ == '__main__':
-    main()
+

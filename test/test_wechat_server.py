@@ -13,7 +13,7 @@ import json
 import flask
 import werkzeug.test
 
-from wechat.server.app import WechatApplication
+from wechat.server import WechatApplication
 from wechat.server import constants, utils, response
 
 
@@ -25,6 +25,7 @@ wechat = WechatApplication(app, '/wechat', WECHAT_TOKEN)
 
 
 CLIENT = werkzeug.test.Client(app)
+
 
 #######################################
 # APIs
@@ -107,6 +108,7 @@ def native_rpc(path, post=None, server_token=WECHAT_TOKEN):
 
 class BaseRequest(object):
     _TEMPLATE = None
+
     def __init__(self):
         self.to_user = randomstr()
         self.from_user = randomstr()
