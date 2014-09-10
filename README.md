@@ -25,9 +25,6 @@ Examples
 	wechat = WechatApplication(app, '/wechat', WECHAT_TOKEN)
 
 
-	CLIENT = werkzeug.test.Client(app)
-
-
 	#######################################
 	# APIs
 	#######################################
